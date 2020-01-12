@@ -1,5 +1,5 @@
 class Patient
-  attr_accessor :anme 
+  attr_accessor :name 
   
   @@all = []
   def initialize(name)
@@ -24,7 +24,7 @@ class Patient
   end
 
   def doctors
-    Appointment.all.map do |appointment|
+    appointment.all.map do |appointment|
       appointment.doctor
     end
   end
